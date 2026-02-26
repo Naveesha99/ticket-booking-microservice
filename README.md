@@ -38,6 +38,71 @@ This project implements a ticket booking system using a microservices architectu
 - 📊 Actuator endpoints for monitoring
 - 🧪 Comprehensive test coverage
 
+### 🔧 Key Technologies
+
+This project leverages modern and industry-standard technologies:
+
+| Technology | Version | Purpose |
+|------------|---------|----------|
+| **Spring Boot** | 4.0.x | Framework for building microservices |
+| **Java** | 17 | Programming language |
+| **Docker** | Latest | Containerization for deployment |
+| **Kafka** | Latest | Message broker for event streaming |
+| **MySQL** | 8.0+ | Relational database management |
+| **JPA/Hibernate** | Latest | Object-relational mapping |
+| **Flyway** | Latest | Database migration tool |
+| **Swagger/OpenAPI** | 2.0.4 | API documentation |
+| **Lombok** | Latest | Java boilerplate reduction |
+| **Keycloak** | Latest | Identity and access management |
+| **Resilience4j** | Latest | Resilience patterns (Circuit Breaker) |
+| **Postman** | Latest | API testing tool |
+
+### 📚 Key Concepts
+
+The project implements several important enterprise architecture patterns and concepts:
+
+**Microservices Architecture**
+- Decoupled Services - Independent services with separate databases
+- Scalability - Each service can be scaled independently
+- Technology Diversity - Services can use different technologies if needed
+
+**Security**
+- Spring Security - Authentication and authorization framework
+- OAuth2 - Token-based authentication protocol
+- Keycloak Integration - Centralized identity management
+- Resource Server - Validates security tokens for protected resources
+
+**API Design**
+- REST API - RESTful endpoints for service communication
+- API Gateway Pattern - Single entry point for all client requests
+- Swagger/OpenAPI - Machine-readable API specifications
+- Functional Endpoint Programming - Alternative to annotation-based controllers
+
+**Resilience & Fault Tolerance**
+- Circuit Breaker Pattern - Prevents cascading failures using Resilience4j
+- Graceful Degradation - Services can continue with reduced functionality
+- Retry Logic - Automatic retry mechanisms for transient failures
+- Timeout Management - Prevents hanging requests
+
+**Data Management**
+- MySQL Database - Persistent data storage
+- JPA/Hibernate ORM - Object-relational mapping
+- Flyway Migrations - Version-controlled database schema changes
+- DB Schema - Normalized relational model
+
+**Event-Driven Architecture**
+- Apache Kafka - Distributed event streaming platform
+- Kafka Topics - Channels for event distribution
+- Producers - Services publishing events to Kafka topics
+- Consumers - Services subscribing to and processing events
+- Event Sourcing - Audit trail of all state changes
+
+**Development & Testing**
+- Postman Collections - Pre-built API test requests
+- Integration Testing - End-to-end service testing
+- Unit Testing - Component-level testing with JUnit
+- Test Coverage - Comprehensive test scenarios
+
 ## 🏗️ Architecture
 
 ```
