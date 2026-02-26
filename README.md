@@ -38,6 +38,10 @@ The system follows an event-driven architecture:
 5. **Order Service** listens on Kafka and processes order events
 6. **Order Service** updates inventory levels via REST client calls to Inventory Service
 
+### 🏗️ Architecture
+
+<img width="1920" height="1080" alt="Client" src="https://github.com/user-attachments/assets/abf75ecf-a6c4-41e9-9c31-9df87d4ad4b6" />
+
 ### Key Features
 
 - ✅ Microservices architecture for scalability
@@ -113,10 +117,6 @@ The project implements several important enterprise architecture patterns and co
 - Postman Collections - Pre-built API test requests
 - Integration Testing - End-to-end service testing
 - Test Coverage - Comprehensive test scenarios
-
-## 🏗️ Architecture
-
-<img width="1920" height="1080" alt="Client" src="https://github.com/user-attachments/assets/abf75ecf-a6c4-41e9-9c31-9df87d4ad4b6" />
 
 ## 📦 Prerequisites
 
