@@ -20,16 +20,28 @@ A comprehensive microservices-based ticket booking system built with Spring Boot
 
 ## 🎯 Overview
 
-This project implements a ticket booking system using a microservices architecture. Each service is independently deployable and scalable, communicating with each other through REST APIs. The system includes:
+This project implements a ticket booking system using a microservices architecture. Each service is independently deployable and scalable, communicating with each other through REST APIs and event-driven patterns. The system includes:
 
-- **API Gateway**: Routes all incoming requests to appropriate microservices
-- **Booking Service**: Manages ticket booking operations
-- **Inventory Service**: Manages ticket inventory and availability
-- **Order Service**: Handles order processing and management
+- **API Gateway**: Routes all incoming requests to appropriate microservices (Port 8090)
+- **Booking Service**: Manages ticket booking operations (Port 8081)
+- **Inventory Service**: Manages ticket inventory and availability (Port 8080)
+- **Order Service**: Handles order processing and management (Port 8082)
+
+## 🔄 Data Flow
+
+The system follows an event-driven architecture:
+
+1. **Client** → **API Gateway** (port 8090)
+2. **API Gateway** → **Booking Service** (port 8081)
+3. **Booking Service** checks inventory via REST client calls to Inventory Service
+4. **Booking Service** publishes booking events to Kafka topic "booking"
+5. **Order Service** listens on Kafka and processes order events
+6. **Order Service** updates inventory levels via REST client calls to Inventory Service
 
 ### Key Features
 
 - ✅ Microservices architecture for scalability
+- ✅ Event-driven architecture with Apache Kafka
 - 🔐 OAuth2 security with Keycloak integration
 - 📚 OpenAPI/Swagger documentation
 - 🐳 Docker containerization with docker-compose
