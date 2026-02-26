@@ -27,7 +27,7 @@ This project implements a ticket booking system using a microservices architectu
 - **Inventory Service**: Manages ticket inventory and availability (Port 8080)
 - **Order Service**: Handles order processing and management (Port 8082)
 
-## 🔄 Data Flow
+### 🔄 Data Flow
 
 The system follows an event-driven architecture:
 
