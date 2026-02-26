@@ -461,7 +461,7 @@ tail -f target/application.log
 
 ## 📚 Services Documentation
 
-### API Gateway (Port 8080)
+### API Gateway (Port 8090)
 
 The API Gateway serves as the entry point for all client requests and routes them to appropriate microservices.
 
@@ -469,15 +469,7 @@ The API Gateway serves as the entry point for all client requests and routes the
 - **Technologies**: Spring Cloud Gateway, OAuth2 Resource Server
 - **Documentation**: [apigateway/SWAGGER_FIX_README.md](apigateway/SWAGGER_FIX_README.md)
 
-### Booking Service (Port 8081)
-
-Manages all ticket booking operations.
-
-- **Functionality**: Create, read, update, cancel bookings
-- **Database**: MySQL (via Inventory Service)
-- **API Base URL**: `http://localhost:8081/api/bookings`
-
-### Inventory Service (Port 8082)
+### Inventory Service (Port 8080)
 
 Manages ticket inventory and availability.
 
@@ -487,7 +479,15 @@ Manages ticket inventory and availability.
 - **API Base URL**: `http://localhost:8082/api/inventory`
 - **Setup**: See [docker-compose.yml](inventoryservice/docker-compose.yml)
 
-### Order Service (Port 8083)
+### Booking Service (Port 8081)
+
+Manages all ticket booking operations.
+
+- **Functionality**: Create, read, update, cancel bookings
+- **Database**: MySQL (via Inventory Service)
+- **API Base URL**: `http://localhost:8081/api/bookings`
+
+### Order Service (Port 8082)
 
 Handles order processing and management.
 
