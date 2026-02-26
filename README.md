@@ -1,6 +1,6 @@
 # Ticket Booking Microservice
 
-A comprehensive microservices-based ticket booking system built with Spring Boot, designed to handle multiple independent services for managing bookings, inventory, orders, and API routing. The project uses modern DevOps practices including Docker containerization and Keycloak authentication.
+A comprehensive microservices-based ticket booking system built with Spring Boot, designed to handle multiple independent services for managing bookings, inventory, orders, and API routing. The project uses modern DevOps practices, including Docker containerization and Keycloak authentication.
 
 ## 📋 Table of Contents
 
@@ -100,38 +100,11 @@ The project implements several important enterprise architecture patterns and co
 **Development & Testing**
 - Postman Collections - Pre-built API test requests
 - Integration Testing - End-to-end service testing
-- Unit Testing - Component-level testing with JUnit
 - Test Coverage - Comprehensive test scenarios
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────┐
-│         Client Applications             │
-└──────────────────┬──────────────────────┘
-                   │
-        ┌──────────▼──────────┐
-        │   API Gateway       │
-        │   (Port 8080)       │
-        └──┬──────────────┬───┘
-           │              │
-    ┌──────▼────┐  ┌─────▼──────┐
-    │  Booking  │  │  Inventory │
-    │  Service  │  │  Service   │
-    │(Port 8081)│  │ (Port 8082)│
-    └──────┬────┘  └─────┬──────┘
-           │              │
-    ┌──────▼────┐  ┌─────▼──────┐
-    │   MySQL   │  │  Keycloak  │
-    │ Database  │  │ (OAuth2)   │
-    └───────────┘  └────────────┘
-           │
-    ┌──────▼────┐
-    │   Order   │
-    │  Service  │
-    │(Port 8083)│
-    └───────────┘
-```
+<img width="1920" height="1080" alt="Client" src="https://github.com/user-attachments/assets/abf75ecf-a6c4-41e9-9c31-9df87d4ad4b6" />
 
 ## 📦 Prerequisites
 
